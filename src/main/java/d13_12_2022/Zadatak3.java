@@ -7,5 +7,7 @@ public class Zadatak3 {
         int z = x - y;
         z = z * z;
 
+        System.out.println(z);
+
     }
 }
