@@ -9,7 +9,7 @@ public class Zadatak6 {
 
         String p = "#";
 
-//------prva_promenljiva----------------------
+//------promenljiva_a----------------------
 
         System.out.print("Unesite a: ");
         int a = mojs.nextInt();
@@ -21,7 +21,7 @@ public class Zadatak6 {
         }
         System.out.println(p);
 
-//------druga_promenljiva----------------------
+//------promenljiva_b----------------------
 
         System.out.print("Unesite b: ");
         int b = mojs.nextInt();
@@ -33,7 +33,7 @@ public class Zadatak6 {
         }
         System.out.println(p);
 
-//------treca_promenljiva----------------------
+//------romenljiva_c----------------------
 
         System.out.print("Unesite c: ");
         int c = mojs.nextInt();
@@ -45,7 +45,7 @@ public class Zadatak6 {
         }
         System.out.println(p);
 
-//------cetvrta_promenljiva----------------------
+//------promenljiva_d----------------------
 
         System.out.print("Unesite d: ");
         int d = mojs.nextInt();
