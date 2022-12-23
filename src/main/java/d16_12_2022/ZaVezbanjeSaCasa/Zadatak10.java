@@ -8,14 +8,19 @@ public class Zadatak10 {
         Scanner mojs = new Scanner(System.in);
 
         System.out.print("Unesite duzinu videa (s): ");
-        int dv = mojs.nextInt();
+        double dv = mojs.nextInt();
 
         System.out.print("Unesite trenutno vreme videa (s): ");
-        int tv = mojs.nextInt();
+        double tv = mojs.nextInt();
 
-        int pv = dv/100;
 
-        int po = tv/pv;
+//  ------racunanje-procenata-za-timeline---------
+
+        double jpv = dv/100; //jedan procenat videa
+
+        double po = tv/jpv; //procenat odgledanog
+
+//  ----------------------------------------------
 
         for (int i = 0; i<100; i++) {
             if (i<=po) {
@@ -24,6 +29,26 @@ public class Zadatak10 {
                 System.out.print("_");
             }
         }
+
+//  --------racunanje-vremena---------------------
+
+            int minuti2 = (int)dv/60;
+            int sekunde2 = (int)dv%60;
+
+            int minuti1 = (int)tv/60;
+            int sekunde1 = (int)tv%60;
+
+//  ----------------------------------------------
+
+        if (dv>60) {
+            System.out.println();
+            System.out.println(minuti1+":"+sekunde1+"/"+minuti2+":"+sekunde2);
+        }else {
+            System.out.println();
+            System.out.println(minuti1+":"+sekunde1+"/"+minuti2+":"+(int)dv);
+        }
+
+
 
     }
 }
