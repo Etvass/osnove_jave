@@ -6,8 +6,23 @@ import java.util.Scanner;
 public class Zadatak5ZaVezbanje {
     public static void main(String[] args) {
 
-        ArrayList<Integer> A = new ArrayList<Integer>();
-        ArrayList<Integer> listaX = new ArrayList<Integer>();
+//        5. . (Za vezbanje) Napisati program koji ucitava niz a duzine N. Nakon unosa niza a, formira se niz b tako sto se prva 3 elementa niza a kopiraju u niz b,
+//                a ostale elemente niza b ispuniti jedinicama.(niz b je iste duzine kao i niz a)
+//
+//
+//        Unesite N: 6
+//        Unesite broj: 1
+//        Unesite broj: 5
+//        Unesite broj: 2
+//        Unesite broj: 7
+//        Unesite broj: 8
+//        Unesite broj: -1
+//
+//        Niz a: 1, 5, 2, 7, 8, -1
+//        Niz b: 1, 5, 2, 1, 1, 1
+
+        ArrayList<Integer> a = new ArrayList<Integer>();
+        ArrayList<Integer> b = new ArrayList<Integer>();
 
         Scanner mojs = new Scanner(System.in);
 
@@ -17,27 +32,32 @@ public class Zadatak5ZaVezbanje {
         for (int i = 0; i < n; i++) {
             System.out.print("Unesite broj: ");
             int broj = mojs.nextInt();
+            a.add(broj);
 
-            A.add(broj);
-        }
-
-        System.out.print("Unesite X: ");
-        int x = mojs.nextInt();
-
-        for (int i = 0; i < n; i++) {
-            if (A.get(i)==x) {
-                listaX.add(i);
-            }
-        }
-        System.out.println("Elementi niza A koji su jednaki broju X imaju indekse:");
-        for (int i = 0; i < listaX.size(); i++) {
-            if (i== listaX.size()-1) {
-                System.out.print(listaX.get(i));
+            if (i<3) {
+                b.add(broj);
             }else {
-                System.out.print(listaX.get(i)+", ");
+                b.add(1);
+            }
+
+        }
+        System.out.print("Niz a: ");
+        for (int i = 0; i < n; i++) {
+            if (i==n-1) {
+                System.out.print(a.get(i));
+            }else {
+                System.out.print(a.get(i)+", ");
             }
         }
-
+        System.out.println();
+        System.out.print("Niz b: ");
+        for (int i = 0; i < n; i++) {
+            if (i==n-1) {
+                System.out.print(b.get(i));
+            }else {
+                System.out.print(b.get(i)+", ");
+            }
+        }
 
     }
 }
