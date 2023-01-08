@@ -80,9 +80,10 @@ public class Zadatak1 {
         igra1.setImeOIgraca(igracO);
         igra1.pokreniIgru();
 
-        while (!(igra1.popunjenaTabla() && igra1.pobednikX() && igra1.pobednik0())) {
+        while (!igra1.pobednikX() && !igra1.pobednik0() && !igra1.popunjenaTabla()) {
+
             igra1.stampaj();
-            System.out.println("Na potezu igrac "+igra1.getNaPotezu());
+            System.out.println("Na potezu igrac " + igra1.getNaPotezu());
             System.out.print("Odigraj potez: ");
             int potez = mojs.nextInt();
 
@@ -90,7 +91,7 @@ public class Zadatak1 {
             if (igra1.poljePrazno(potez)) {
                 igra1.odigrajPotez(potez);
                 igra1.zameniIgraca();
-            }else {
+            } else {
                 System.out.println("Potez nije validan!");
             }
         }

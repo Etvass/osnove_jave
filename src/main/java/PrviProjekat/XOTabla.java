@@ -153,12 +153,12 @@ public class XOTabla {
     }
 
     public boolean popunjenaTabla() {
-        if (this.polje1.equals(" ") && this.polje2.equals(" ") && this.polje3.equals(" ") && this.polje4.equals(" ")
-                && this.polje5.equals(" ") && this.polje6.equals(" ") && this.polje7.equals(" ") && this.polje8.equals(" ")
-                && this.polje9.equals(" ")) {
-            return false;
-        } else {
+        if (!this.polje1.equals(" ") && !this.polje2.equals(" ") && !this.polje3.equals(" ") && !this.polje4.equals(" ")
+                && !this.polje5.equals(" ") && !this.polje6.equals(" ") && !this.polje7.equals(" ") && !this.polje8.equals(" ")
+                && !this.polje9.equals(" ")) {
             return true;
+        } else {
+            return false;
         }
     }
 
