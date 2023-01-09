@@ -97,10 +97,13 @@ public class Zadatak1 {
         }
 
         if (igra1.pobednikX()) {
+            igra1.stampaj();
             System.out.println("Cestitamo! Pobednik je igrac X");
         } else if (igra1.pobednik0()) {
+            igra1.stampaj();
             System.out.println("Cestitamo! Pobednik je igrac O");
         }else {
+            igra1.stampaj();
             System.out.println("Igra je neresena!");
         }
 
