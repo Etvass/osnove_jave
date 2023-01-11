@@ -38,5 +38,6 @@ public class Zadatak1 {
         jedan.setPodatciAutora(drugi);
         jedan.print();
 
+
     }
 }
