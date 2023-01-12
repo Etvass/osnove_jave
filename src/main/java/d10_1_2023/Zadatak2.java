@@ -31,21 +31,31 @@ public class Zadatak2 {
 
     public static void main(String[] args) {
 
-        Proizvod stolica = new Proizvod("Stolica","Mirko",3000);
-        Proizvod frizider = new Proizvod("Frizider","Petar",3000);
+        Kupac prviKupac = new Kupac("Marko","Pancic");
+        Kupac drugiKupac = new Kupac("Nikola","Orascic");
 
-        Kupac prvi = new Kupac("Petar","Petrovic","658-145");
-        Kupac drugi = new Kupac("Filip","Maksimovic","456-982");
+        Proizvod jedanProizvod = new Proizvod("Stolica",2000);
+        Proizvod drugiProizvod = new Proizvod("Sto",5000);
+        Proizvod treciProizvod = new Proizvod("TanjiriKomplet",3000);
+        Proizvod cetvrtiProizvod = new Proizvod("Escajg",3500);
 
-        ClanskaKarta prva = new ClanskaKarta(30,"657-458");
-        ClanskaKarta druga = new ClanskaKarta(10,"589-412");
+        ClanskaKarta jednaKartica = new ClanskaKarta(10,"315-845");
+        ClanskaKarta drugaKartica = new ClanskaKarta(5,"598-093");
 
-        prvi.setBrojClanske(prva);
-        prvi.stampaj();
+        jedanProizvod.setKupacInfo(prviKupac);
+        prviKupac.setKarticaInfo(jednaKartica);
+        drugiKupac.setKarticaInfo(drugaKartica);
+        double izracunataCena=jedanProizvod.racunanjeCene();
+        System.out.println("Cena za ovaj proizvod sa vasom karticom bi bila: "+izracunataCena+"Dinara");
+        jedanProizvod.stampaj();
 
-        stolica.setImeIprezime(drugi);
-        stolica.setBrojClanskeKarte(druga);
-        stolica.stampaj();
+        jedanProizvod.setKupacInfo(drugiKupac);
+        jedanProizvod.stampaj();
+
+        drugiProizvod.setKupacInfo(drugiKupac);
+        double cenaSaPopustom=drugiProizvod.racunanjeCene();
+        System.out.println("Cena za ovaj proizvod sa vasom karticom bi bila: "+cenaSaPopustom);
+        drugiProizvod.stampaj();
 
     }
 }

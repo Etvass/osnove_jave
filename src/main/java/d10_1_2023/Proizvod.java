@@ -3,72 +3,50 @@ package d10_1_2023;
 public class Proizvod {
 
     private String naziv;
-    private String kupac;
     private int cenaIzrade;
-    private ClanskaKarta pospustClanskaKarta;
-    private Kupac imeIprezime;
-    private ClanskaKarta brojClanskeKarte;
+    private Kupac kupacInfo;
+
+
+//  ------SETERI-I-GETERI------------------------------------------------------------
 
     public String getNaziv() {
         return naziv;
-    }
-
-    public String getKupac() {
-        return kupac;
     }
 
     public int getCenaIzrade() {
         return cenaIzrade;
     }
 
-    public void setKupac(String kupac) {
-        this.kupac = kupac;
+    public void setNaziv(String naziv) {
+        this.naziv = naziv;
     }
 
     public void setCenaIzrade(int cenaIzrade) {
         this.cenaIzrade = cenaIzrade;
     }
 
-    public ClanskaKarta getPospustClanskaKarta() {
-        return pospustClanskaKarta;
+    public Kupac getKupacInfo() {
+        return kupacInfo;
     }
 
-    public void setPospustClanskaKarta(ClanskaKarta pospustClanskaKarta) {
-        this.pospustClanskaKarta = pospustClanskaKarta;
+    public void setKupacInfo(Kupac kupacInfo) {
+        this.kupacInfo = kupacInfo;
     }
+    //  -----------KONSTRUKTORI-------------------------------------------------------------
 
-    public Kupac getImeIprezime() {
-        return imeIprezime;
-    }
-
-    public void setImeIprezime(Kupac imeIprezime) {
-        this.imeIprezime = imeIprezime;
-    }
-
-    public ClanskaKarta getBrojClanskeKarte() {
-        return brojClanskeKarte;
-    }
-
-    public void setBrojClanskeKarte(ClanskaKarta brojClanskeKarte) {
-        this.brojClanskeKarte = brojClanskeKarte;
-    }
-
-    public Proizvod(String naziv, String kupac, int cenaIzrade) {
+    public Proizvod(String naziv, int cenaIzrade) {
         this.naziv = naziv;
-        this.kupac = kupac;
         this.cenaIzrade = cenaIzrade;
     }
 
-    public Proizvod(String naziv) {
-        this.naziv = naziv;
-    }
+//  -----------METODE------------------------------------------------------------------------
 
     public double racunanjeCene() {
-        return this.cenaIzrade*1.9*(100-this.pospustClanskaKarta.getPopust())/100;
+        return this.cenaIzrade*1.9*(100-kupacInfo.getKarticaInfo().getPopust())/100;
     }
     public void stampaj() {
-        double cena = this.racunanjeCene();
-        System.out.println(this.naziv+" - "+cena+"\n"+this.imeIprezime.getIme()+" "+
-                this.imeIprezime.getPrezime()+" - "+this.brojClanskeKarte.getBrojKartice());
+        System.out.println(this.naziv+" - "+this.cenaIzrade+" Dinara");
+        System.out.println(this.kupacInfo.getIme()+" "+this.kupacInfo.getPrezime()+" - "+
+                this.kupacInfo.getKarticaInfo().getBrojKartice());
     }
 }

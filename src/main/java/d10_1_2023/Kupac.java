@@ -4,8 +4,7 @@ public class Kupac {
 
     private String ime;
     private String prezime;
-    private String clanskaKarta;
-    private ClanskaKarta brojClanske;
+    private ClanskaKarta karticaInfo;
 
     public String getIme() {
         return ime;
@@ -13,10 +12,6 @@ public class Kupac {
 
     public String getPrezime() {
         return prezime;
-    }
-
-    public String getClanskaKarta() {
-        return clanskaKarta;
     }
 
     public void setIme(String ime) {
@@ -27,27 +22,21 @@ public class Kupac {
         this.prezime = prezime;
     }
 
-    public ClanskaKarta getBrojClanske() {
-        return brojClanske;
+    public ClanskaKarta getKarticaInfo() {
+        return karticaInfo;
     }
 
-    public void setBrojClanske(ClanskaKarta brojClanske) {
-        this.brojClanske = brojClanske;
+    public void setKarticaInfo(ClanskaKarta karticaInfo) {
+        this.karticaInfo = karticaInfo;
     }
 
-    public Kupac(String ime, String prezime, String clanskaKarta) {
+    public Kupac(String ime, String prezime) {
         this.ime = ime;
         this.prezime = prezime;
-        this.clanskaKarta = clanskaKarta;
     }
 
-    public Kupac(String clanskaKarta) {
-        this.clanskaKarta = clanskaKarta;
-    }
     public void stampaj() {
-        System.out.println(this.ime+" "+this.prezime+" "+this.brojClanske.getBrojKartice());
+        System.out.println(this.ime+" "+this.prezime+" "+this.karticaInfo.getBrojKartice());
     }
-
-
 
 }

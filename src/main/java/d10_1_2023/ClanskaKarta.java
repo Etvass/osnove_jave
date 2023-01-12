@@ -2,7 +2,7 @@ package d10_1_2023;
 
 public class ClanskaKarta {
 
-    private double popust;
+    private int popust;
     private String brojKartice;
 
     public double getPopust() {
@@ -13,11 +13,11 @@ public class ClanskaKarta {
         return brojKartice;
     }
 
-    public void setPopust(double popust) {
+    public void setPopust(int popust) {
         this.popust = popust;
     }
 
-    public ClanskaKarta(double popust, String brojKartice) {
+    public ClanskaKarta(int popust, String brojKartice) {
         this.popust = popust;
         this.brojKartice = brojKartice;
     }
