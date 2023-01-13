@@ -82,11 +82,7 @@ public class ZeleniKarton {
     }
 
     public boolean ispitPolozen() {
-        if (this.ocena>5) {
-            return true;
-        }else {
-            return false;
-        }
+        return this.ocena>5 ? true : false;
     }
 
     public void stampaj() {
