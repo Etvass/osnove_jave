@@ -47,8 +47,13 @@ public class Transakcija {
     }
 
     public void izvrsiTransakciju(int novac) {
-        this.racunSaKogSePrenoseSredstva.menjaStanje(-(novac+this.provizija(novac)));
-        this.racunNaKojSePrenoseSredstva.menjaStanje(novac);
+        if (this.racunSaKogSePrenoseSredstva.getTrenutnoStanje()>novac) {
+            this.racunSaKogSePrenoseSredstva.menjaStanje(-(novac+this.provizija(novac)));
+            this.racunNaKojSePrenoseSredstva.menjaStanje(novac);
+        }else {
+            System.out.println("Greska! Nemate dovoljno sredstava na racunu.");
+        }
+
     }
 
     public void stampa() {

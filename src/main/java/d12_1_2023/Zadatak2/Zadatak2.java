@@ -52,8 +52,8 @@ public class Zadatak2 {
         drugiRacun.stampa();
         System.out.println();
 
-        prvaProbna.izvrsiTransakciju(14000);
         prvaProbna.stampa();
+        prvaProbna.izvrsiTransakciju(250000);
         System.out.println();
 
         prviRacun.stampa();
