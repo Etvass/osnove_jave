@@ -1,5 +1,7 @@
 package d16_1_2023.Zadatak1;
 
+import java.util.Scanner;
+
 public class Zadatak1 {
 
 //    .Zadatak
@@ -29,10 +31,24 @@ public class Zadatak1 {
 //
 //    U glavnom programu kreirati 2 igraca i 2 trenera, i istestirati metode.
 
+//    (Za vezbanje) U glavnom programu kreirati niz igraca i niz trenera,
+//    na kraju programa ispisati sve igrace i trenere. Podatke za igrace i
+//    trenere unosi korisnik sa tastature.
+
     public static void main(String[] args) {
 
-        Trener srpski = new Trener("Petar Vasic","287496513022",
-                                1980,20,"za igru");
+        Scanner mojs = new Scanner(System.in);
+
+        System.out.print("Unesite ime i prezime Srpskog trenera (sa crticom - umesto razmaka): ");
+        String imeSrpskogTrenera = mojs.next();
+        System.out.print("Unesite jmbg Srpskog trenera: ");
+        String jmbgSTrenera= mojs.next();
+        System.out.println("Unesite sledece podatke istim redosledom (sa crticom - umesto razmaka):" +
+                " \ngodinu rodjenja\n" +
+                "godine iskustva i tip Srpskog treenra: ");
+
+        Trener srpski = new Trener(imeSrpskogTrenera,jmbgSTrenera,
+                mojs.nextInt(),mojs.nextInt(),mojs.next());
         Trener italijanski = new Trener("Fernando Peloni","45698712365",
                 1976,30,"za igru");
 
