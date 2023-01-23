@@ -38,6 +38,7 @@ public class Tetrapak extends Ambalaza{
         }
     }
 
+    @Override
     public void stampaj() {
         System.out.println("Barkod: "+this.barkod);
         System.out.println("Naziv artikla: "+this.nazivArtikla);
